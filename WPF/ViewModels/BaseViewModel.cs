@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AccountingProcess.ViewModels
+namespace WPF.ViewModels
 {
-    class BaseViewModel
+    public class BaseViewModel
     {
     }
 }

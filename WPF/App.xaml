@@ -1,8 +1,8 @@
-﻿<Application x:Class="AccountingProcess.App"
+﻿<Application x:Class="WPF.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:AccountingProcess"
-             StartupUri="MainWindow.xaml">
+             xmlns:local="clr-namespace:WPF"
+             StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
          
     </Application.Resources>
