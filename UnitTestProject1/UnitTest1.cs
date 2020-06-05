@@ -1,7 +1,6 @@
-using Domain.ValueObjects;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Tests
+namespace UnitTestProject1
 {
     [TestClass]
     public class UnitTest1
@@ -9,7 +8,6 @@ namespace Tests
         [TestMethod]
         public void TestMethod1()
         {
-           
         }
     }
 }
