@@ -7,18 +7,14 @@ using System.Text;
 namespace Domain.ValueObjects.Tests
 {
     [TestClass()]
-    public class OneYenCoinTests
+    public class MoneyCategoryTests
     {
         [TestMethod()]
         public void AmountTest()
         {
-            var oneyen = new OneYenCoin(1);
-        }
-
-        [TestMethod()]
-        public void OneYenCoinTest()
-        {
-
+            var oneyen = new MoneyCategory(1,2);
+            Assert.AreEqual(1, oneyen.Category);
+            Assert.AreEqual(2, oneyen.Amount);
         }
     }
 }
