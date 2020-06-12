@@ -4,16 +4,11 @@ using System.Text;
 
 namespace Domain.ValueObjects
 {
-    public class MoneyCategory
+    public abstract class MoneyCategory<T> where T : MoneyCategory<T>
     {
-        public int Category { get; }
-        public int Count { get; set; }
-
-        public MoneyCategory(int _category,int _count)
-        {
-            Category = _category;
-            Count = _count;
-        }
+        protected static int Category;
+        public int Count { get; set; } = 0;
+        private readonly string Unit="円";
 
         public int Amount
         {
@@ -21,6 +16,21 @@ namespace Domain.ValueObjects
             {
                 return Category*Count;
             }
-         }        
+         }  
+
+        public string DisplayValue
+        {
+            get
+            {
+                return Amount.ToString("N");
+            }
+        }
+        public string DisplayValueWithYen
+        {
+            get
+            {
+                return Amount + Unit;
+            }
+        }
     }
 } 
