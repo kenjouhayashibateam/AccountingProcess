@@ -1,15 +1,27 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Domain.ValueObjects
 {
+    /// <summary>
+    /// 金種クラス
+    /// </summary>
+    /// <typeparam name="T">金種</typeparam>
     public abstract class MoneyCategory<T> where T : MoneyCategory<T>
     {
+        /// <summary>
+        /// 金種の数字
+        /// </summary>
         protected static int Category;
+        /// <summary>
+        /// 数量
+        /// </summary>
         public int Count { get; set; } = 0;
-        private readonly string Unit="円";
-
+        /// <summary>
+        /// 金額
+        /// </summary>
         public int Amount
         {
             get
@@ -17,7 +29,9 @@ namespace Domain.ValueObjects
                 return Category*Count;
             }
          }  
-
+        /// <summary>
+        /// 表示用金額
+        /// </summary>
         public string DisplayValue
         {
             get
@@ -25,11 +39,34 @@ namespace Domain.ValueObjects
                 return Amount.ToString("N");
             }
         }
-        public string DisplayValueWithYen
+        /// <summary>
+        /// 表示用金額&単位
+        /// </summary>
+        public string DisplayValueWithUnit
         {
             get
             {
-                return Amount + Unit;
+                return DisplayValue + Properties.Resources.Unit;
+            }
+        }
+        /// <summary>
+        /// 表示用金額（束用）
+        /// </summary>
+        public string DisplayValueBundleAmount
+        {
+            get
+            {
+                return (Category * Count * 50).ToString("N");
+            }
+        }
+        /// <summary>
+        /// 表示用金額（束用）&単位
+        /// </summary>
+        public string DisplayValueBundleAmountWithUnit
+        {
+            get
+            {
+                return DisplayValueBundleAmount + Properties.Resources.Unit;
             }
         }
     }

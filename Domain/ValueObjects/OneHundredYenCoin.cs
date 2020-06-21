@@ -7,9 +7,9 @@ namespace Domain.ValueObjects
     /// <summary>
     /// 百円玉
     /// </summary>
-    public class OneHundredCoin : MoneyCategory<OneHundredCoin>
+    public class OneHundredYenCoin : MoneyCategory<OneHundredYenCoin>
     {
-       public OneHundredCoin()
+       public OneHundredYenCoin()
         {
             Category = 100;
         }

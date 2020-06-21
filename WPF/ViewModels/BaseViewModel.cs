@@ -3,7 +3,10 @@ using System.Diagnostics;
 
 namespace WPF.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    /// <summary>
+    /// ビューモデルの共通処理クラス
+    /// </summary>
+    public abstract class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
     

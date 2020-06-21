@@ -1,4 +1,5 @@
-﻿using Domain.ValueObjects;
+﻿using Domain.Entities;
+using Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -55,7 +56,7 @@ namespace WPF.ViewModels
                 CallPropertyChanged();
             }
         }
-        public OneHundredCoin OneHundredYen
+        public OneHundredYenCoin OneHundredYen
         {
             get
             {
@@ -114,20 +115,21 @@ namespace WPF.ViewModels
                 tenThousandYen = value;
                 CallPropertyChanged();
             }
-        } 
-            
-        public int TotalAmount
-        {
-            get => totalAmount;
-            set => totalAmount = value;
         }
 
-        private int totalAmount;
+        public CashBoxGrandTotal TotalAmount
+        {
+            get
+            {
+                return TotalAmount;
+            }
+        }
+        
         private OneYenCoin oneYen;
         private FiveYenCoin fiveYen;
         private TenYenCoin tenYen;
         private FiftyYenCoin fiftyYen;
-        private OneHundredCoin oneHundredYen;
+        private OneHundredYenCoin oneHundredYen;
         private FiveHundredYenCoin fiveHundredYen;
         private OneThousandYenBill oneThousandYen;
         private FiveThousandYenBill fiveThousandYen;
