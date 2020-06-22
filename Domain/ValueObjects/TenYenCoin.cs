@@ -9,7 +9,7 @@ namespace Domain.ValueObjects
     ///  </summary>
      public class TenYenCoin:MoneyCategory<TenYenCoin>
     {
-                public TenYenCoin()
+        public TenYenCoin()
         {
             Category = 10;
         }
