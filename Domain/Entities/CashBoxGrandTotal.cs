@@ -1,5 +1,4 @@
 ﻿using Domain.ValueObjects;
-using Microsoft.VisualBasic;
 
 namespace Domain.Entities
 {
@@ -19,7 +18,7 @@ namespace Domain.Entities
         {
             get
             {
-                return TotalAmount + Strings.Space(1) + Properties.Resources.Unit;
+                return TotalAmount + " " + Properties.Resources.Unit;
             }
         }
         /// <summary>

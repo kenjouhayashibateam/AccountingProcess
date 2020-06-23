@@ -9,7 +9,7 @@ namespace WPF.Behaviors
     {
         public static int NumberConvert(string value)
         {
-            Regex regex = new Regex(@"0-9");
+            Regex regex = new Regex(@"[0-9]");
             if (regex.IsMatch(value))
             {
                 return Int32.Parse(value);
