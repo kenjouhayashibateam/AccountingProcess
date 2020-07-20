@@ -7,9 +7,12 @@ namespace Domain.Helpers
         /// 小銭束の1束の枚数
         /// </summary>
         /// <returns></returns>
-        public static int Bandle()
+        public static int Bundle
         {
-            return 50;
+            get
+            {
+                return 50;
+            }
         }
     }
 }

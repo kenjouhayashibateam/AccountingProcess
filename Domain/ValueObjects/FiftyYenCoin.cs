@@ -4,11 +4,8 @@ namespace Domain.ValueObjects
     /// <summary>
     /// 五十円玉
     /// </summary>
-    public class FiftyYenCoin : MoneyCategory<FiftyYenCoin>
+    public class FiftyYenCoin : SingleMoney
     {
-        public FiftyYenCoin()
-        {
-            Category = 50;
-        }
+        public FiftyYenCoin() : base(50) {}
     }
 }

@@ -40,12 +40,22 @@ namespace Domain.Entities
         /// <param name="oneThousandYen">1,000円</param>
         /// <param name="fiveThousandYen">5,000円</param>
         /// <param name="tenThousandYen">10,000円</param>
+        /// <param name="oneHundredYenBundle">1円束</param>
+        /// <param name="fiveHundredYenBundle">5円束</param>
+        /// <param name="tenYenBundle">10円束</param>
+        /// <param name="fiftyYenBundle">50円束</param>
+        /// <param name="oneHundredYenBundle">100円束</param>
+        /// <param name="fiveHundredYenBundle">500円束</param>
         public CashBoxGrandTotal(OneYenCoin oneYen,FiveYenCoin fiveYen,TenYenCoin tenYen,FiftyYenCoin fiftyYen, 
             OneHundredYenCoin oneHundredYen,FiveHundredYenCoin fiveHundredYen,OneThousandYenBill oneThousandYen,
-            FiveThousandYenBill fiveThousandYen,TenThousandYenBill tenThousandYen)
+            FiveThousandYenBill fiveThousandYen,TenThousandYenBill tenThousandYen,OneYenBundle oneYenBundle,
+            FiveYenBundle fiveYenBundle,TenYenBundle tenYenBundle,FiftyYenBundle fiftyYenBundle,OneHundredYenBundle oneHundredYenBundle,
+            FiveHundredYenBundle fiveHundredYenBundle)
         {
-            Total = oneYen.Amount + fiveYen.Amount + tenYen.Amount + fiftyYen.Amount + oneHundredYen.Amount + fiveHundredYen.Amount +
-                oneThousandYen.Amount + fiveThousandYen.Amount + tenThousandYen.Amount;
+            Total = oneYen.Amount + fiveYen.Amount + tenYen.Amount + fiftyYen.Amount + oneHundredYen.Amount + 
+                fiveHundredYen.Amount +oneThousandYen.Amount + fiveThousandYen.Amount + tenThousandYen.Amount +
+                oneYenBundle.Amount + fiveYenBundle.Amount + tenYenBundle.Amount + fiftyYenBundle.Amount + 
+                oneHundredYenBundle.Amount + fiveHundredYenBundle.Amount;
         }
         /// <summary>
         /// トータル金額

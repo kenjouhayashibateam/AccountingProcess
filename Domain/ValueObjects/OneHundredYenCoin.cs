@@ -4,11 +4,8 @@ namespace Domain.ValueObjects
     /// <summary>
     /// 百円玉
     /// </summary>
-    public class OneHundredYenCoin : MoneyCategory<OneHundredYenCoin>
+    public class OneHundredYenCoin : SingleMoney
     {
-       public OneHundredYenCoin()
-        {
-            Category = 100;
-        }
+       public OneHundredYenCoin() : base(100){}
     }
 }

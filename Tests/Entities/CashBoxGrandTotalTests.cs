@@ -45,11 +45,36 @@ namespace Domain.Entities.Tests
             {
                 Count = 10
             };
+            OneYenBundle oneYenBundle = new OneYenBundle
+            {
+                Count = 10
+            };
+            FiveYenBundle fiveYenBundle = new FiveYenBundle
+            {  
+                Count = 10
+            };
+            TenYenBundle tenYenBundle = new TenYenBundle
+            {
+                Count = 10
+            };
+            FiftyYenBundle fiftyYenBundle = new FiftyYenBundle
+            {
+                Count = 10
+            };
+            OneHundredYenBundle oneHundredYenBundle = new OneHundredYenBundle
+            {
+                Count = 10
+            };
+            FiveHundredYenBundle fiveHundredYenBundle = new FiveHundredYenBundle
+            {
+                Count = 10
+            };
             CashBoxGrandTotal grandTotal = new CashBoxGrandTotal(oneYen, fiveYen, tenYen, fiftyYen, oneHundredYen, fiveHundredYen,
-                oneThousandYen, fiveThousandYen, tenThousandYen);
-            Assert.AreEqual(grandTotal.TotalAmount, "166,660");
-            Assert.AreEqual(grandTotal.TotalAmountWithUnit, "166,660円");
-            Assert.AreEqual(grandTotal.TotalAmountWithUnitSpace, "166,660 円");
+                oneThousandYen, fiveThousandYen, tenThousandYen,oneYenBundle,fiveYenBundle,tenYenBundle,fiftyYenBundle,
+                oneHundredYenBundle,fiveHundredYenBundle);
+            Assert.AreEqual(grandTotal.TotalAmount, "199,960");
+            Assert.AreEqual(grandTotal.TotalAmountWithUnit, "199,960円");
+            Assert.AreEqual(grandTotal.TotalAmountWithUnitSpace, "199,960 円");
         }
     }
 }
