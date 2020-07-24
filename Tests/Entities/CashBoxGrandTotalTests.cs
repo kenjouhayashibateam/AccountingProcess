@@ -7,7 +7,7 @@ namespace Domain.Entities.Tests
     public class CashBoxGrandTotalTests
     {
         [TestMethod()]
-        public void CashBoxGrandTotalTest()
+        public void シナリオ()
         {
             OneYenCoin oneYen = new OneYenCoin
             {
@@ -72,9 +72,9 @@ namespace Domain.Entities.Tests
             CashBoxGrandTotal grandTotal = new CashBoxGrandTotal(oneYen, fiveYen, tenYen, fiftyYen, oneHundredYen, fiveHundredYen,
                 oneThousandYen, fiveThousandYen, tenThousandYen,oneYenBundle,fiveYenBundle,tenYenBundle,fiftyYenBundle,
                 oneHundredYenBundle,fiveHundredYenBundle);
-            Assert.AreEqual(grandTotal.TotalAmount, "199,960");
-            Assert.AreEqual(grandTotal.TotalAmountWithUnit, "199,960円");
-            Assert.AreEqual(grandTotal.TotalAmountWithUnitSpace, "199,960 円");
+            Assert.AreEqual(grandTotal.TotalAmount, "499,660");
+            Assert.AreEqual(grandTotal.TotalAmountWithUnit, "499,660円");
+            Assert.AreEqual(grandTotal.TotalAmountWithUnitSpace, "499,660 円");
         }
     }
 }

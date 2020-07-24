@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Button x:Name="ShowRemainingMoneyCalculationView" Content="金庫金額計算" Margin="350,200" Click="ShowRemainingMoneyCalculationView_Click"/>
     </Grid>
 </Window>

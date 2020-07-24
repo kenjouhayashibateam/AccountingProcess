@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF.Views;
 
 namespace WPF
 {
@@ -23,6 +24,13 @@ namespace WPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ShowRemainingMoneyCalculationView_Click(object sender, RoutedEventArgs e)
+        {
+            //画面遷移のプログラムを作る時に削除する
+            RemainingMoneyCalculationView rmc = new RemainingMoneyCalculationView();
+            rmc.ShowDialog();
         }
     }
 }

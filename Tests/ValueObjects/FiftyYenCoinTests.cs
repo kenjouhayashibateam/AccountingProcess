@@ -15,13 +15,5 @@ namespace Domain.ValueObjects.Tests
             Assert.AreEqual(fiftyYen.DisplayValue, "500");
             Assert.AreEqual(fiftyYen.DisplayValueWithUnit, "500円");
         }
-        public void 束に対する金額を返す()
-        {
-            FiftyYenCoin fiftyYenBundle = new FiftyYenCoin
-            {
-                Count = 1
-            };
-            Assert.AreEqual(fiftyYenBundle,25000);
-        }
     }
 }
